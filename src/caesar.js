@@ -8,15 +8,14 @@ function caesar(input, shift = 0, encode = true){
   // create a mutatable variable for the resulting input and a temp variable for the index locator
   let result = ""
   let newIndex = 0
-​
   // If the shift integer is zero, greater than 25, or less than -25, return false
   if(shift === 0 || shift < -25 || shift > 25){
       return false
   }
   
   // Check every character in the input
-  for(characters in input){
-      character = input[characters]
+  for(let characters in input){
+      let character = input[characters]
       // ...and compare each character in the input to a letter in the alphabet array
       alphabet.find(letter =>{
           if(letter === character){
